@@ -6,10 +6,10 @@ const PlaceSchema = new mongoose.Schema({
     imageUrl: {type: String, required: true},
     location: {type: String, required: true},
     title: {type: String, required: true},
-    rating:{type: Number, required: true},
+    rating:{type: String, required: true},
     review: {type: String, required: true},
-    latitude:{type: Number, required: true},
-    longitude:{type: Number, required: true},
+    latitude:{type: String, required: true},
+    longitude:{type: String, required: true},
     contact_id: {type: String, required: true},
     popular: [
         {
