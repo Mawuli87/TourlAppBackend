@@ -3,7 +3,7 @@ const Place = require("../models/Places");
 
 module.exports = {
     addPlaces: async (req, res, next) => {
-        const { country_id, description, imageUrl, location, title, rating, review, latitude, longitude, contact_id } = req.body;
+        const { country_id, description, imageUrl, location, title, rating, review, latitude, longitude, contact_id ,popular} = req.body;
 
         try {
             const newPlace = new Place({
@@ -17,7 +17,9 @@ module.exports = {
                 latitude,
                 longitude,
                 contact_id,
+                popular
             })
+            
 
             await newPlace.save();
 
