@@ -25,7 +25,9 @@ module.exports = {
 
             res.status(201).json({ status: true })
         } catch (error) {
+            console.log("Errors "+ error)
             return next(error)
+           
         }
     },
 
